@@ -1,0 +1,43 @@
+# Use the turtle to plot the function y = x^2. 
+
+import turtle
+
+def main():	
+	wn = turtle.Screen()
+	
+	line = turtle.Turtle()
+	line.color("black")
+	line.forward(200)
+	line.write("x")
+	line.right(180)
+	line.forward(400)
+	line.right(180)
+	line.forward(200)
+	line.left(90)
+	line.forward(200)
+	line.write("y")
+	line.right(180)
+	line.forward(400)
+	line.right(180)
+	line.forward(200)
+	line.hideturtle()
+	line.penup()
+	line.goto(300,300)
+	
+	plot = turtle.Turtle()
+	plot.color("red")
+	plot.shape("triangle")
+	plot.penup()
+	
+	for x in range (-15, 16,1):
+		y = x**2
+		plot.goto(x, y)
+		plot.pendown()
+		
+	plot.write("y = x**2")
+	plot.hideturtle()
+	
+	wn.exitonclick()
+
+	
+main()
